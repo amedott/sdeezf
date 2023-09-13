@@ -1,0 +1,356 @@
+/* Font for everything */
+body {
+  font-family: 'M Plus 1p', sans-serif;
+  color: white;
+  font-size: 16;
+  background-color: #323232;
+  margin-left: 0;
+}
+/* everything else for every page */
+#main-container {
+  max-width: 900px;
+  margin: 0 auto;
+  background-color: #323232;
+}
+body a {
+  color: #D8DEE9;
+  font-weight: bold;
+  text-decoration: var(--link-text-decoration);
+}
+a.inline {
+  text-decoration: none;
+  text-indent: 0;
+  display: inline-block;
+  color: white;
+  background-color: #434343;
+  padding: 1pt 4pt;
+  border-radius: 2pt;
+  transition: all 250ms cubic-bezier(.4, 0, .2, 1);
+}
+a.inline:hover {
+  background-color: #7289DA;
+}
+a.inline::after {
+  content: '';
+  display: block;
+  border-bottom: 1px solid white;
+  transform: scaleX(0);
+  transition: all 250ms cubic-bezier(.4, 0, .2, 1);
+}
+.flex {
+  display: flex;
+  margin-bottom: 5px;
+}
+.content-wrap {
+  margin-top: var(--content-margin-top);
+}
+#content-container {
+  width: 60%;
+  margin-bottom: 5px;
+  background-color: #3B4252;
+}
+#left-sidebar {
+  width: 150px;
+  margin-left: 10px;
+  margin-bottom: 5px;
+  height: 100%;
+  overflow: hidden;
+  background-color: #3B4252;
+}
+#right-sidebar {
+  width: 150px;
+  margin-left: 10px;
+  margin-bottom: 5px;
+  height: 100%;
+  overflow: hidden;
+  background-color: #3B4252;
+}
+#header-contained {
+  height: 150px;
+  margin-bottom: 0px;
+  background-image: url(./img/header.png);
+  background-position: center center;
+}
+#footer {
+  height: 30px;
+  text-align: center;
+  color: #D8DEE9;
+  background-color: #28364F;
+}
+#header-full {
+  display: none;
+  height: 150px;
+  margin-bottom: 0px;
+  background-image: url(./img/header.png);
+  background-position: center center;
+}
+.wrapper {
+  padding: 25px;
+  padding-top: 15px;
+}
+.sidebar-wrapper {
+  padding: 15px;
+  height: 100%;
+  overflow: hidden;
+}
+.footer-wrapper {
+  padding: 5px;
+}
+html {
+  scroll-behavior: smooth;
+}
+/* To keep your site RESPONSIVE, make sure this variable matches the width for --container-width UNLESS --container-width is 100% - if it's 100%, you'll need to manually input a breakpoint. */
+@media only screen and (max-width: 800px) {
+  .flex {
+      flex-wrap: wrap;
+ }
+  @media (max-width: 600px) {
+      .facet_sidebar {
+          display: none;
+     }
+ }
+  #left-sidebar {
+      width: 100%;
+      display: block;
+      order: 2;
+      margin-right: 0;
+      margin-bottom: 10px;
+ }
+  #right-sidebar {
+      width: 100%;
+      display: block;
+      order: 3;
+      margin-left: 0;
+ }
+  #content-container {
+      width: 100%;
+      display: block;
+      order: 1;
+      margin-bottom: 10px;
+ }
+}
+/* Banner */
+.banner {
+  display: block;
+  padding: 4.5084972%;
+  overflow: hidden;
+  background-color: #3B4252;
+}
+.banner_icon {
+  float: left;
+  padding-right: 50px;
+  width: 30vw;
+  max-width: 320px;
+}
+/* Dotted border */
+hr.dotted {
+  border-top: 3px dotted whitesmoke;
+}
+/* Solid border */
+hr.solid {
+  border-top: 2px solid white;
+}
+/* Nav */
+#navbar-contained {
+  margin-bottom: 5px 
+}
+#navbar-full {
+  display: none;
+}
+.nav {
+  margin-left: 0;
+  text-align: center;
+  margin-top: 0;
+  margin-bottom: 10px;
+  padding-top: 1em;
+  padding-bottom: 1em;
+  background-color: #28364F;
+}
+.nav li {
+  display: inline-block;
+  padding-right: 20px;
+}
+.navbar {
+  margin-left: 0;
+  text-align: center;
+  margin-top: 0;
+  margin-bottom: 10px;
+  padding-top: 1em;
+  padding-bottom: 1em;
+  background-color: #28364F;
+}
+.navbar li a {
+  display: block;
+  padding: 10px 10px 5px 10px;
+  background-color: #222;
+  color: white;
+  text-decoration: none;
+  transition: all 250ms cubic-bezier(.4, 0, .2, 1);
+}
+.nav li a:hover:not(.active) {
+  background-color: #333;
+}
+.nav li a:not(.active)::after {
+  content: '';
+  display: block;
+  padding-bottom: 2px;
+  border-bottom: 3px solid whitesmoke;
+  border-radius: 3px;
+  transform: scaleX(0.1);
+  transition: all 250ms cubic-bezier(.4, 0, .2, 1);
+}
+.nav li a:hover:not(.active)::after {
+  transform: scaleX(1);
+}
+.nav .active {
+  background-color: whitesmoke;
+  font-weight: bold;
+}
+.nav .active:after {
+  content: '';
+  display: block;
+  padding-bottom: 2px;
+  border-bottom: 3px solid white;
+  border-radius: 3px;
+}
+/* SMS */
+.links {
+  list-style-type: none;
+  padding: 0;
+  margin-left: auto;
+  margin-right: auto;
+  width: 61.8vw;
+}
+.links li {
+  float: left;
+  margin-left: 3px;
+  width: 200px;
+  height: 40px;
+  font-size: clamp(8pt, 1.88vw, 12pt);
+}
+.links li a {
+  display: block;
+  position: relative;
+  padding: 8px;
+  background-color: #222;
+  color: white;
+  text-decoration: none;
+  text-align: center;
+  transition: all 250ms cubic-bezier(.4, 0, .2, 1);
+}
+.links li a.button::after {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 200px;
+  height: 40px;
+  background-color: #222;
+  opacity: 0.25;
+  transition: all 250ms cubic-bezier(.4, 0, .2, 1);
+}
+.links li a.button:hover::after {
+  opacity: 0;
+}
+.links li a img {
+  position: absolute;
+  top: 0;
+  left: 0;
+  z-index: 0;
+}
+.links li a:hover {
+  background-color: #7289DA;
+}
+.links li a.twitter:hover {
+  background-color: #1da1f2;
+}
+.links li a.youtube:hover {
+  background-color: #e62117;
+}
+.links li a.soundcloud:hover {
+  background-color: #ff7700;
+}
+.links li a.niconico:hover {
+  background-color: black;
+}
+.links li a.github:hover {
+  background-color: #111;
+}
+.links li a.bilibili:hover {
+  background-color: #01b2f6;
+}
+.links li a.inactive:hover {
+  background-color: #808080;
+}
+/* misc */
+.rest {
+  padding: 4.5%;
+  overflow: hidden;
+}
+.rest2 {
+  padding: 5%;
+  overflow: hidden;
+}
+.rest3 {
+  padding: 2.25%;
+  overflow: hidden;
+}
+.ust {
+  list-style-type: none;
+  padding: 0;
+  margin-left: auto;
+  margin-right: auto;
+  text-align: center;
+  display: block;
+  position: relative;
+  margin: 4pt auto 0;
+  font-weight: lighter;
+  font-size: clamp(20pt, 5vw, 50pt);
+  background-color: #434343;
+  padding: 36pt 0;
+  transition: all 250ms cubic-bezier(.4, 0, .2, 1);
+}
+.ust:hover {
+  background-color: #7289DA;
+}
+.ust:hover::after {
+  background-size: 70vw;
+  opacity: 1;
+}
+.ust a {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  z-index: 2;
+}
+.ust span {
+  position: relative;
+  z-index: 1;
+}
+/* container */
+.container {
+  position: relative;
+  overflow: hidden;
+  width: 100%;
+  padding-top: 56.25%;
+ /* 16:9 Aspect Ratio (divide 9 by 16 = 0.5625) */
+}
+/* iframe fix */
+.responsive-iframe {
+  position: absolute;
+  top: 0;
+  left: 0;
+  bottom: 0;
+  right: 0;
+  width: 100%;
+  height: 100%;
+}
+/* masonry */
+.grid-item {
+  width: 200px;
+}
+.grid-item--width2 {
+  width: 400px;
+}
